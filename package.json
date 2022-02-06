@@ -1,0 +1,14 @@
+{
+  "name": "feedback-app-2022",
+  "version": "1.0.0",
+  "description": "Full stack App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jean C Mieses",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
