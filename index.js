@@ -1,14 +1,20 @@
 const express = require('express');
 const app = express();
+var methodOverride = require('method-override');
+
+//serving static files
+app.use(express.static('public'))
+app.set('view engine', 'ejs');
+app.use(methodOverride('_method'))
 
 //get all feedbacks
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+   res.render('feedback/index');
 })
 
 // create a new feedback
 app.get('/new', (req, res) => {
-    res.send('create new feedback');
+    res.render('feedback/new');
 })
 
 app.post('/', (req, res) => {
@@ -17,26 +23,22 @@ app.post('/', (req, res) => {
 
 // Get one feedback
 app.get('/:id', (req, res) => {
-    res.send('detail');
+    res.render('feedback/feedback');
 })
-
 
 // update a feedback
 app.get('/:id/edit', (req, res) => {
-    res.send('update');
+    res.render('feedback/edit');
 })
 
 app.put('/:id', (req, res) => {
     res.send('Updating feedback');
 })
 
-
 //delete a feedback
 app.delete('/:id', (req, res) => {
     res.send('deleting');
 })
-
-
 
 
 app.listen(3000, () => {
