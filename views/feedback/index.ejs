@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
+    <meta charset="utf-8">
+    <title></title>
   </head>
-
   <body>
-    <h1>Feedback Posts here</h1>
+    <ul>
+        <% for(let i = 0; i < feedbacks.length; i++) { %>
+         <li> <a href=<%=feedbacks[i]._id%> > <%=feedbacks[i].title%>  </a>  </li>
+        <% } %>
+    </ul>
+
 
   </body>
-
 </html>

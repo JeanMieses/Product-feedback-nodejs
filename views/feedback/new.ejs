@@ -8,8 +8,23 @@
 
   <body>
    <form method="post" action="/">
-       <p>Enter feedback here</p>
-       <button>create</button>
+      <label for="title">title</label>
+      <input type="text" name="title" id="title"/>   
+
+      <label for="category">category</label>
+      <select name="category" id="category">
+        <option value="enhancement">enhancement</option>
+        <option value="feature">feature</option>
+        <option value="bug">bug</option>
+        <option value="UI">UI</option>
+        <option value="UX">UX</option>
+      </select>
+
+        <label for="description">description</label>
+        <textarea name="description" id="description"></textarea>
+      
+      <br />
+      <button>create</button>
    </form>
 
   </body>
